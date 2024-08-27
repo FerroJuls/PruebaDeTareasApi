@@ -1,7 +1,5 @@
 package com.tareas.tareas.Models;
 
-import java.util.Date;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -37,16 +35,16 @@ public class usuario {
     private String correo;
 
     @Column(name = "nacimiento", nullable = false, length = 15)
-    private Date nacimiento;
+    private String nacimiento;
 
     @Column(name = "contrasena", nullable = false, length = 50)
     private String contrasena;
 
     @Column(name = "actualizacion", nullable = false, length = 15)
-    private Date actualizacion;
+    private String actualizacion;
 
     @Column(name = "iniciosesion", nullable = false, length = 15)
-    private Date iniciosesion;
+    private String iniciosesion;
 
     @Column(name = "estado", nullable = false, length = 15)
     private String estado;

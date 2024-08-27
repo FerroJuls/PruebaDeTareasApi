@@ -71,7 +71,6 @@ function mostrarTabla(result) {
     for (var i = 0; i < result.length; i++) {
         var trRegistro = document.createElement("tr");
         trRegistro.innerHTML = `
-                    <td>${result[i]["idUsuario"]}</td>
                     <td class="text-center align-middle">${result[i]["td"]}</td>
                     <td class="text-center align-middle">${result[i]["documento"]}</td>
                     <td class="text-center align-middle">${result[i]["nombre"]}</td>
@@ -247,7 +246,7 @@ function validartipoDocumento(cuadroNumero) {
     var valor = cuadroNumero.value;
     var valido = true;
 
-    if (valor.length < 1 || valor.length > 3) {
+    if (valor.length < 1 || valor.length > 10) {
         valido = false;
     }
 
@@ -468,13 +467,6 @@ $(document).on("click", ".eliminar", function () {
                     // Actualizar la lista de cliente después de eliminar
                     listarUsuario();
                 },
-                error: function (xhr, status, error) {
-                    Swal.fire({
-                        title: "Error",
-                        text: "¡El usuario no a devuelto el libro!",
-                        icon: "error"
-                    });
-                }
             });
         }
     });
