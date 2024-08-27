@@ -1,64 +1,52 @@
-// package com.tareas.tareas.Taks;
+package com.tareas.tareas.Taks;
 
-// import com.tareas.tareas.InterfacesService.IusuarioService;
-// import com.tareas.tareas.models.usuario;
-// import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.mail.javamail.JavaMailSender;
-// import org.springframework.mail.javamail.MimeMessageHelper;
-// import org.springframework.scheduling.annotation.Scheduled;
-// import org.springframework.stereotype.Component;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 
-// import jakarta.mail.MessagingException;
-// import jakarta.mail.internet.MimeMessage;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
-// import java.time.LocalDate;
-// import java.util.List;
+@Component
+public class Taks {
 
-// @Component
-// public class Taks {
+    //programar una tarea que se ejecute cada 10 segundo
+    //milisegundos
+    //1 segundo en milisegundos 1000
+    // @Scheduled(fixedRate = 10000) 
+    // public void sendNotification10Second() {
+    //     SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss aa");
+    //     long miliseconds = System.currentTimeMillis();
+    //     java.sql.Date date = new Date(miliseconds);
+    //     String dateFormateada = formato.format(date);
+    //     System.out.println("Tarea de 10 segundos tiempo: " + dateFormateada);
+    //     System.out.println();
+    // }
+    //fixedRate=al inicio y luego el tiempo destinado
+    //initialDelay=tenga un tiempo espera antes de iniciar
+    // @Scheduled(fixedDelay  = 60000,initialDelay = 10000) 
+    // public void sendNotificationOneMinute() {
+    //     SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss aa");
+    //     long miliseconds = System.currentTimeMillis();
+    //     java.sql.Date date = new Date(miliseconds);
+    //     String dateFormateada = formato.format(date);
+    //     System.out.println("Tarea de 1 minuto tiempo: " + dateFormateada);
+    //     System.out.println();
+    // }
+    /*
+     * 1 segundo=1.000
+     * 1 minuto=60.000
+     * 1 hora=3.600.000
+     * 1 día =86,400,000
+     */
 
-//     @Autowired
-//     private IusuarioService usuarioService;
-
-//     @Autowired
-//     private JavaMailSender javaMailSender;
-
-//     @Scheduled(cron = "0 0 0 * * *") // Ejecutar todos los días a medianoche
-//     public void revisarUsuariosCumplen18() {
-//         List<usuario> usuarios = usuarioService.findAll();
-//         LocalDate today = LocalDate.now();
-
-//         for (usuario u : usuarios) {
-//             LocalDate birthDate = u.getNacimiento();
-//             LocalDate dayBefore18 = birthDate.plusYears(18).minusDays(1);
-
-//             if (today.equals(dayBefore18)) {
-//                 enviarCorreoCambioTipoDocumento(u);
-//             }
-//         }
-//     }
-
-//     private void enviarCorreoCambioTipoDocumento(usuario usuario) {
-//         String destinatario = usuario.getCorreo();
-//         String asunto = "Cambio de Tipo de Documento";
-//         String cuerpo = "<p>Estimado " + usuario.getNombre() + ",</p>"
-//                 + "<p>Nos gustaría informarle que está a un día de cumplir 18 años. Es necesario que actualice su tipo de documento en nuestra plataforma.</p>"
-//                 + "<p>Por favor, inicie sesión y realice la actualización lo antes posible.</p>"
-//                 + "<p>Gracias por su atención.</p>"
-//                 + "<p>Atentamente,<br>Genius Inventory Company<br>invgenius2024@gmail.com</p>";
-
-//         try {
-//             MimeMessage message = javaMailSender.createMimeMessage();
-//             MimeMessageHelper helper = new MimeMessageHelper(message, true);
-
-//             helper.setTo(destinatario);
-//             helper.setSubject(asunto);
-//             helper.setText(cuerpo, true);
-
-//             javaMailSender.send(message);
-//             System.out.println("Correo enviado a: " + destinatario);
-//         } catch (MessagingException e) {
-//             System.out.println("Error al enviar correo a " + usuario.getCorreo() + ": " + e.getMessage());
-//         }
-//     }
-// }
+     //cron
+     @Scheduled(cron = "0 25 13 * * 1")
+    public void sendNotificationcron() {
+        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss aa");
+        long miliseconds = System.currentTimeMillis();
+        java.sql.Date date = new Date(miliseconds);
+        String dateFormateada = formato.format(date);
+        System.out.println("Tarea con cron: " + dateFormateada);
+        System.out.println();
+    }
+}
