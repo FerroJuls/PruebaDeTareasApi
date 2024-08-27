@@ -33,16 +33,15 @@
             <table class="table table-striped">
                 <thead class="thead-dark">
                     <tr>
-                        <th>T.D</th>
-                        <th>N° Documento</th>
-                        <th>Nombre</th>
-                        <th>Nacimiento</th>
-                        <th>Contraseña</th>
-                        <th>Correo</th>
-                        <th>Ultima Actualización</th>
-                        <th>Ultimo Inicio Sesión</th>
-                        <th>Estado</th>
-                        <th>Opciones</th>
+                        <th class="text-center align-middle">T.D</th>
+                        <th class="text-center align-middle">N° Documento</th>
+                        <th class="text-center align-middle">Nombre</th>
+                        <th class="text-center align-middle">Correo</th>
+                        <th class="text-center align-middle">Nacimiento</th>
+                        <th class="text-center align-middle">Ultima Actualización</th>
+                        <th class="text-center align-middle">Ultimo Inicio Sesión</th>
+                        <th class="text-center align-middle">Estado</th>
+                        <th class="text-center align-middle">Opciones</th>
                     </tr>
                 </thead>
                 <tbody id="cuerpoTabla">
@@ -80,7 +79,7 @@
             border-radius: 5px;
             border: 1px solid #ced4da;
             display: block;
-            width: 117%;
+            width: 100%;
         }
 
         .btn-dark {
@@ -158,9 +157,10 @@
                         </div>
                         <div class="form-group col-md-12">
                             <label for="contrasena">Contraseña</label>
-                            <input type="text" class="form-control" id="contrasena" placeholder="Contraseña"
+                            <input type="password" class="form-control" id="contrasena" placeholder="Contraseña"
                                 onfocusout="validarcontrasena(this)" onkeypress="alfaNumericosSignos(event);" required>
                         </div>
+                        
                         <div class="form-group col-md-6">
                             <label for="nacimiento">Nacimiento</label>
                             <input type="date" class="form-control" id="nacimiento" placeholder="Fecha Nacimiento"
@@ -197,7 +197,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="/PruebaDeTareasApi/Front-end/user.js"></script>
+    <script src="/Front-end/user.js"></script>
 </body>
 
 </html>

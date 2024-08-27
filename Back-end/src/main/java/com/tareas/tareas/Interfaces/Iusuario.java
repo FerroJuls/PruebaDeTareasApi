@@ -11,7 +11,7 @@ import com.tareas.tareas.Models.usuario;
 @Repository
 public interface Iusuario extends CrudRepository<usuario, String> {
 
-    @Query ("SELECT u FROM usuario u WHERE u.nombre LIKE %?1% OR u.correo LIKE %?1%")
+    @Query ("SELECT u FROM usuario u WHERE u.nombre LIKE %?1% OR u.correo LIKE %?1% OR u.documento LIKE %?1% OR u.estado LIKE %?1%")
     List<usuario> filtroUsuario(String filtro);
     
 }

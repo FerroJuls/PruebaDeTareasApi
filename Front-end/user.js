@@ -74,9 +74,8 @@ function mostrarTabla(result) {
                     <td class="text-center align-middle">${result[i]["td"]}</td>
                     <td class="text-center align-middle">${result[i]["documento"]}</td>
                     <td class="text-center align-middle">${result[i]["nombre"]}</td>
-                    <td class="text-center align-middle">${result[i]["nacimiento"]}</td>
                     <td class="text-center align-middle">${result[i]["correo"]}</td>
-                    <td class="text-center align-middle">${result[i]["contrasena"]}</td>
+                    <td class="text-center align-middle">${result[i]["nacimiento"]}</td>
                     <td class="text-center align-middle">${result[i]["actualizacion"]}</td>
                     <td class="text-center align-middle">${result[i]["iniciosesion"]}</td>
                     <td class="text-center align-middle">${result[i]["estado"]}</td>
