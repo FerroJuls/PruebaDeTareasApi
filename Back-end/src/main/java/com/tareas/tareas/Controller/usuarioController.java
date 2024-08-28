@@ -26,6 +26,7 @@ public class usuarioController {
     @PostMapping("/")
     public ResponseEntity<Object> save (@ModelAttribute("usuario") usuario usuario){
         usuarioService.save(usuario);
+        
         return new ResponseEntity<>(usuario, HttpStatus.OK);
     }
     
