@@ -1,4 +1,4 @@
-package com.tareas.tareas.Models;
+package com.planificadortareas.planificadortareas.Models;
 
 import java.util.Date;
 

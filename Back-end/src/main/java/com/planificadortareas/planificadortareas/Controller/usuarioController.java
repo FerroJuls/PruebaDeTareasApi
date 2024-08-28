@@ -1,4 +1,4 @@
-package com.tareas.tareas.Controller;
+package com.planificadortareas.planificadortareas.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tareas.tareas.InterfacesService.IusuarioService;
-import com.tareas.tareas.Models.usuario;
+import com.planificadortareas.planificadortareas.InterfacesService.IusuarioService;
+import com.planificadortareas.planificadortareas.Models.usuario;
 
 @RequestMapping("/api/v1/usuario")
 @RestController

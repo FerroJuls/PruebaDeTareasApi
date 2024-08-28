@@ -1,4 +1,4 @@
-package com.tareas.tareas.config;
+package com.planificadortareas.planificadortareas.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

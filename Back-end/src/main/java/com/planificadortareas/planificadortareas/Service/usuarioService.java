@@ -1,4 +1,4 @@
-package com.tareas.tareas.Service;
+package com.planificadortareas.planificadortareas.Service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.tareas.tareas.Interfaces.Iusuario;
-import com.tareas.tareas.InterfacesService.IusuarioService;
-import com.tareas.tareas.Models.usuario;
+import com.planificadortareas.planificadortareas.Interfaces.Iusuario;
+import com.planificadortareas.planificadortareas.InterfacesService.IusuarioService;
+import com.planificadortareas.planificadortareas.Models.usuario;
 
 @Service 
 public class usuarioService implements IusuarioService {

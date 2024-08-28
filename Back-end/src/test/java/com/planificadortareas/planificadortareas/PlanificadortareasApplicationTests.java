@@ -1,10 +1,10 @@
-package com.tareas.tareas;
+package com.planificadortareas.planificadortareas;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TareasApplicationTests {
+class PlanificadortareasApplicationTests {
 
 	@Test
 	void contextLoads() {

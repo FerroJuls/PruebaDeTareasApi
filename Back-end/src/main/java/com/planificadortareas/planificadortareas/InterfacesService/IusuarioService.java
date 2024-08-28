@@ -1,9 +1,9 @@
-package com.tareas.tareas.InterfacesService;
+package com.planificadortareas.planificadortareas.InterfacesService;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.tareas.tareas.Models.usuario;
+import com.planificadortareas.planificadortareas.Models.usuario;
 
 
 public interface IusuarioService {

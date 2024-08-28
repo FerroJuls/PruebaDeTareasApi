@@ -1,4 +1,4 @@
-package com.tareas.tareas.Interfaces;
+package com.planificadortareas.planificadortareas.Interfaces;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.tareas.tareas.Models.usuario;
+import com.planificadortareas.planificadortareas.Models.usuario;
 
 @Repository
 public interface Iusuario extends CrudRepository<usuario, String> {
