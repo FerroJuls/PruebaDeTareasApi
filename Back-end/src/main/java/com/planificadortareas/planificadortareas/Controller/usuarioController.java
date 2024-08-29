@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.planificadortareas.planificadortareas.InterfacesService.IusuarioService;
 import com.planificadortareas.planificadortareas.Models.usuario;
-import com.planificadortareas.planificadortareas.Service.emailService;
 
 @RequestMapping("/api/v1/usuario")
 @RestController
@@ -24,14 +23,14 @@ public class usuarioController {
     @Autowired
     private IusuarioService usuarioService;
 
-    @Autowired
-    private emailService emailService;
+    // @Autowired
+    // private emailService emailService;
 
 
     @PostMapping("/")
     public ResponseEntity<Object> save (@ModelAttribute("usuario") usuario usuario){
         usuarioService.save(usuario);
-        emailService.enviarCorreoBienvenida(usuario.getCorreo());
+        // emailService.enviarCorreoBienvenida(usuario.getCorreo());
         return new ResponseEntity<>(usuario, HttpStatus.OK);
     }
     
@@ -79,6 +78,7 @@ public class usuarioController {
             usuario.setContrasena(usuarioUpdate.getContrasena());
             usuario.setActualizacion(usuarioUpdate.getActualizacion());
             usuario.setIniciosesion(usuarioUpdate.getIniciosesion());
+            usuario.setNotificado(usuarioUpdate.getNotificado());
             usuario.setEstado(usuarioUpdate.getEstado());
 
             usuarioService.save(usuario);

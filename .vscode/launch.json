@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PlanificadortareasApplication",
+            "request": "launch",
+            "mainClass": "com.planificadortareas.planificadortareas.PlanificadortareasApplication",
+            "projectName": "tareas"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-TareasApplication<tareas>",
             "request": "launch",
             "cwd": "${workspaceFolder}",

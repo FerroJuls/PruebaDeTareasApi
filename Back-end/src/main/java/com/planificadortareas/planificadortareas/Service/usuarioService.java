@@ -69,6 +69,13 @@ public class usuarioService implements IusuarioService {
         return listaUsuario;
     }
 
+    
+    @Override
+    public List<usuario> notificacionRegistro() {
+        List<usuario> listaUsuario = data.notificacionRegistro();
+        return listaUsuario;
+    }
 
+    
 
 }

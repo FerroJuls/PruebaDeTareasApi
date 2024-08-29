@@ -78,6 +78,7 @@ function mostrarTabla(result) {
                     <td class="text-center align-middle">${result[i]["nacimiento"]}</td>
                     <td class="text-center align-middle">${result[i]["actualizacion"]}</td>
                     <td class="text-center align-middle">${result[i]["iniciosesion"]}</td>
+                    <td class="text-center align-middle">${result[i]["notificado"]}</td>
                     <td class="text-center align-middle">${result[i]["estado"]}</td>
                     <td class="text-center align-middle">
                         <i class="fas fa-edit editar" onclick="registrarUsuarioBandera=false;" data-id="${result[i]["idUsuario"]}"></i>

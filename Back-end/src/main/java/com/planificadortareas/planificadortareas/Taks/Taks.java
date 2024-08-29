@@ -20,6 +20,17 @@ public class Taks {
     @Autowired
     private emailService email;
 
+    @Scheduled(cron = "0 * * * * *")
+    public void sendNotificationRegistrocron() {
+
+        var listaUsuario=data.notificacionRegistro();
+        for(usuario usuario:listaUsuario){
+            System.out.println("Usuario Registro Exitoso "+ 
+            usuario.getNombre());
+            email.notificacionRegistro(usuario);
+        }
+    }
+
     @Scheduled(cron = "0 35 8 * * *")
     public void sendNotificationcron() {
 
@@ -43,7 +54,7 @@ public class Taks {
 
     }
 
-    @Scheduled(cron= "0 35 8 * * 0" )
+    @Scheduled(cron= "0 35 8 * * *" )
     public void sendNotificationcroniniciosesionNotificar(){
 
         var listaUsuario=data.iniciosesionNotificar();
