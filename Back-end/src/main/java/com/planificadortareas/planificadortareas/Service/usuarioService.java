@@ -50,8 +50,8 @@ public class usuarioService implements IusuarioService {
 
     
     @Override
-    public List<usuario> cambiarTipoDocumento(String cambiarTipoDocumento) {
-        List<usuario> listaUsuario = data.cambiarTipoDocumento(cambiarTipoDocumento);
+    public List<usuario> cambiarTipoDocumento() {
+        List<usuario> listaUsuario = data.cambiarTipoDocumento();
         return listaUsuario;
     }
 

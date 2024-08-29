@@ -41,6 +41,12 @@ public class usuarioController {
         return new ResponseEntity<>(listaUsuario, HttpStatus.OK);
     }
 
+    // @GetMapping("/mayoriaedad")
+    // public ResponseEntity<Object> finEdad() {
+    //     var listaUsuario = usuarioService.cambiarTipoDocumento();
+    //     return new ResponseEntity<>(listaUsuario, HttpStatus.OK);
+    // }
+
     @GetMapping("/busquedaFiltros/{filtro}")
     public ResponseEntity<Object> findFiltro(@PathVariable String filtro) {
         var listaUsuario = usuarioService.filtroUsuario(filtro);
