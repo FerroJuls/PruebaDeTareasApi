@@ -203,7 +203,7 @@ function registrarUsuario() {
             error: function (xhr, status, error) {
                 Swal.fire({
                     title: "Error",
-                    text: "¡El usuario no a devuelto el libro!",
+                    text: "¡Llene todos los campos correctamente!",
                     icon: "error"
                 });
             }
