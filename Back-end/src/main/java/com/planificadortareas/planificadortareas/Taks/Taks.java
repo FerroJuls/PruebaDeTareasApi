@@ -48,9 +48,9 @@ public class Taks {
 
         var listaUsuario=data.iniciosesionNotificar();
         for(usuario usuario:listaUsuario){
-            System.out.println("Usuario cambiar contraseña"+
+            System.out.println("Usuario inicia sesion pronto en la Mafia"+
             usuario.getNombre());
-            email.actualizarContraseña(usuario);
+            email.iniciosesionNotificar(usuario);
         }
 
     }
