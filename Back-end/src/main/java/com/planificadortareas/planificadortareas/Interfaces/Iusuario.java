@@ -18,9 +18,9 @@ public interface Iusuario extends CrudRepository<usuario, String> {
     List<usuario> cambiarTipoDocumento();
 
     @Query("SELECT u FROM usuario u WHERE  DATEDIFF(NOW(), u.actualizacion) >= 90")
-    List<usuario> actualizarContraseña(String actualizarContraseña);
+    List<usuario> actualizarContraseña();
 
     @Query("SELECT u FROM usuario u WHERE  DATEDIFF(NOW(), u.iniciosesion) >= 30")
-    List<usuario> iniciosesionNotificar(String iniciosesionNotificar);
+    List<usuario> iniciosesionNotificar();
 
 }

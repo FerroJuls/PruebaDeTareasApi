@@ -57,15 +57,15 @@ public class usuarioService implements IusuarioService {
 
     
     @Override
-    public List<usuario> actualizarContraseña(String actualizarContraseña) {
-        List<usuario> listaUsuario = data.actualizarContraseña(actualizarContraseña);
+    public List<usuario> actualizarContraseña() {
+        List<usuario> listaUsuario = data.actualizarContraseña();
         return listaUsuario;
     }
 
     
     @Override
-    public List<usuario> iniciosesionNotificar(String iniciosesionNotificar) {
-        List<usuario> listaUsuario = data.iniciosesionNotificar(iniciosesionNotificar);
+    public List<usuario> iniciosesionNotificar() {
+        List<usuario> listaUsuario = data.iniciosesionNotificar();
         return listaUsuario;
     }
 
