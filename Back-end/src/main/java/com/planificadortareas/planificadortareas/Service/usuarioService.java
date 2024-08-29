@@ -57,8 +57,8 @@ public class usuarioService implements IusuarioService {
 
     
     @Override
-    public List<usuario> actualizarContraseña() {
-        List<usuario> listaUsuario = data.actualizarContraseña();
+    public List<usuario> actualizarContrasena() {
+        List<usuario> listaUsuario = data.actualizarContrasena();
         return listaUsuario;
     }
 

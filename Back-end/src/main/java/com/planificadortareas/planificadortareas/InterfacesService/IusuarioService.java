@@ -19,7 +19,7 @@ public interface IusuarioService {
     // Filtro
     public List<usuario> filtroUsuario(String filtro);
     public List<usuario> cambiarTipoDocumento();
-    public List<usuario> actualizarContraseña();
+    public List<usuario> actualizarContrasena();
     public List<usuario> iniciosesionNotificar();
     
 }
