@@ -20,7 +20,7 @@ public class Taks {
     @Autowired
     private emailService email;
 
-    @Scheduled(fixedRate = 60000)
+    @Scheduled(cron = "0 35 8 * * *")
     public void sendNotificationcron() {
 
         var listaUsuario=data.cambiarTipoDocumento();
@@ -29,12 +29,6 @@ public class Taks {
             usuario.getNombre());
             email.cambiarTipoDocumento(usuario);
         }
-        // SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss aa");
-        // long miliseconds = System.currentTimeMillis();
-        // java.sql.Date date = new Date(miliseconds);
-        // String dateFormateada = formato.format(date);
-        // System.out.println("Tarea con cron: " + dateFormateada);
-        // System.out.println();
     }
 }
 
