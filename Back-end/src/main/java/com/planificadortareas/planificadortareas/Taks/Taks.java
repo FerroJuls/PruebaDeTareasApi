@@ -3,6 +3,8 @@ package com.planificadortareas.planificadortareas.Taks;
 // import java.sql.Date;
 // import java.text.SimpleDateFormat;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -28,6 +30,8 @@ public class Taks {
             System.out.println("Usuario Registro Exitoso "+ 
             usuario.getNombre());
             email.notificacionRegistro(usuario);
+            usuario.setNotificado(new Date());
+            data.save(usuario);
         }
     }
 

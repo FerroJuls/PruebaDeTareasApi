@@ -49,7 +49,7 @@ public class usuario {
     private Date iniciosesion;
 
     @Column(name = "notificado", nullable = true, length = 40)
-    private String notificado;
+    private Date notificado;
 
     @Column(name = "estado", nullable = false, length = 15)
     private String estado;
