@@ -48,13 +48,13 @@ public class emailService {
         }
     }
 
-    public String iniciosesionNotificar(String destinatario){
+    public String iniciosesionNotificar(usuario usuario){
         try{
             String asunto = "Inicia sesión para evitar el bloqueo de tu cuenta";
             String cuerpo = ""
                 + "<body style=\"font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;\">\r\n"
                 + "<div style=\"max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\">\r\n"
-                + "  <h1 style=\"font-size: 24px; font-weight: bold; color: #333333;\">¡Hola!</h1>\r\n"
+                + "  <h1 style=\"font-size: 24px; font-weight: bold; color: #333333;\">¡Hola! "+usuario.getNombre()+"</h1>\r\n"
                 + "  <p style=\"font-size: 16px; color: #555555;\">Para mantener tu cuenta activa, por favor inicia sesión regularmente.</p>\r\n"
                 + "  <p style=\"font-size: 16px; color: #555555;\">Si no inicias sesión en los próximos días, tu cuenta podría ser bloqueada.</p>\r\n"
                 + "  <p style=\"font-size: 16px; color: #555555;\">Accede ahora y evita cualquier inconveniente.</p>\r\n"
@@ -65,7 +65,7 @@ public class emailService {
                 + "</div>\r\n"
                 + "</body>";
 
-            var retorno=enviarCorreo(destinatario,asunto,cuerpo);
+            var retorno=enviarCorreo(usuario.getCorreo(),asunto,cuerpo);
             if(retorno) {
                 return "se envió correctamente";
             }else {
@@ -79,13 +79,13 @@ public class emailService {
     }
 
 
-    public String actualizarContraseña(String destinatario){
+    public String actualizarContraseña(usuario usuario){
         try{
             String asunto = "Actualiza tu contraseña";
             String cuerpo = ""
                 + "<body style=\"font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;\">\r\n"
                 + "<div style=\"max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\">\r\n"
-                + "  <h1 style=\"font-size: 24px; font-weight: bold; color: #333333;\">¡Hola!</h1>\r\n"
+                + "  <h1 style=\"font-size: 24px; font-weight: bold; color: #333333;\">¡Hola! "+usuario.getNombre()+"</h1>\r\n"
                 + "  <p style=\"font-size: 16px; color: #555555;\">Es hora de actualizar tu contraseña para mantener tu cuenta segura.</p>\r\n"
                 + "  <p style=\"font-size: 16px; color: #555555;\">Te recomendamos hacer esto cada cierto tiempo para proteger tu información.</p>\r\n"
                 + "  <p style=\"font-size: 16px; color: #555555;\">Accede a tu cuenta y cambia tu contraseña en la sección de configuración.</p>\r\n"
@@ -99,7 +99,7 @@ public class emailService {
 
             
 
-            var retorno=enviarCorreo(destinatario,asunto,cuerpo);
+            var retorno=enviarCorreo(usuario.getCorreo(),asunto,cuerpo);
             if(retorno) {
                 return "se envió correctamente";
             }else {
