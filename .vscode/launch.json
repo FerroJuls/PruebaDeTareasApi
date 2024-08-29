@@ -9,6 +9,16 @@
             "projectName": "tareas",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PlanificadortareasApplication<planificadortareas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.planificadortareas.planificadortareas.PlanificadortareasApplication",
+            "projectName": "planificadortareas",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
