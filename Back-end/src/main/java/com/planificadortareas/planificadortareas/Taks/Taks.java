@@ -43,7 +43,7 @@ public class Taks {
 
     }
 
-    @Scheduled(cron= "0 35 8 * * *" )
+    @Scheduled(cron= "0 35 8 * * 0" )
     public void sendNotificationcroniniciosesionNotificar(){
 
         var listaUsuario=data.iniciosesionNotificar();
