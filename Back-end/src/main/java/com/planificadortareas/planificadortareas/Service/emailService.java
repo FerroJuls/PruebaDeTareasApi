@@ -5,6 +5,8 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
+import com.planificadortareas.planificadortareas.Models.usuario;
+
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 
@@ -111,13 +113,13 @@ public class emailService {
     }
 
 
-    public String cambiarTipoDocumento(String destinatario){
+    public String cambiarTipoDocumento(usuario usuario ){
         try{
             String asunto = "Es hora de actualizar tu tipo de documento";
             String cuerpo = ""
                 + "<body style=\"font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;\">\r\n"
                 + "<div style=\"max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\">\r\n"
-                + "  <h1 style=\"font-size: 24px; font-weight: bold; color: #333333;\">¡Hola!</h1>\r\n"
+                + "  <h1 style=\"font-size: 24px; font-weight: bold; color: #333333;\">¡Hola! "+usuario.getNombre()+"</h1>\r\n"
                 + "  <p style=\"font-size: 16px; color: #555555;\">Queremos recordarte que es el momento de actualizar tu tipo de documento. Es un proceso rápido que te ayudará a mantener tus datos al día en LaMafia.</p>\r\n"
                 + "  <p style=\"font-size: 16px; color: #555555;\">Por favor, accede a tu cuenta y realiza la actualización lo antes posible.</p>\r\n"
                 + "  <p style=\"font-size: 16px; color: #555555;\">Gracias por tu colaboración.</p>\r\n"
@@ -131,7 +133,7 @@ public class emailService {
 
             
 
-            var retorno=enviarCorreo(destinatario,asunto,cuerpo);
+            var retorno=enviarCorreo(usuario.getCorreo(),asunto,cuerpo);
             if(retorno) {
                 return "se envió correctamente";
             }else {
