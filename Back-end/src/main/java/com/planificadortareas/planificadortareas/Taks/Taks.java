@@ -30,5 +30,31 @@ public class Taks {
             email.cambiarTipoDocumento(usuario);
         }
     }
+
+    @Scheduled(cron= "0 35 8 * * *" )
+    public void sendNotificationcronactualizarcontrasena(){
+
+        var listaUsuario=data.actualizarContrasena();
+        for(usuario usuario:listaUsuario){
+            System.out.println("Usuario cambiar contraseña"+
+            usuario.getNombre());
+            email.actualizarContraseña(usuario);
+        }
+
+    }
+
+    @Scheduled(cron= "0 35 8 * * *" )
+    public void sendNotificationcroniniciosesionNotificar(){
+
+        var listaUsuario=data.iniciosesionNotificar();
+        for(usuario usuario:listaUsuario){
+            System.out.println("Usuario cambiar contraseña"+
+            usuario.getNombre());
+            email.actualizarContraseña(usuario);
+        }
+
+    }
+
+
 }
 
