@@ -48,8 +48,8 @@ public class usuario {
     @Column(name = "iniciosesion", nullable = false, length = 15)
     private Date iniciosesion;
 
-    @Column(name = "notificado", nullable = false, length = 40)
-    private Date notificado;
+    @Column(name = "notificado", nullable = true, length = 40)
+    private String notificado;
 
     @Column(name = "estado", nullable = false, length = 15)
     private String estado;

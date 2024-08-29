@@ -22,7 +22,7 @@ public class Taks {
 
     @Scheduled(cron = "0 * * * * *")
     public void sendNotificationRegistrocron() {
-
+// traer toda la lista que notificado sea null, recorrer el arreglo 1*1 enviando el correo electronico y luego actualizando este registro con la fecha que se esta enviando la notificacion
         var listaUsuario=data.notificacionRegistro();
         for(usuario usuario:listaUsuario){
             System.out.println("Usuario Registro Exitoso "+ 

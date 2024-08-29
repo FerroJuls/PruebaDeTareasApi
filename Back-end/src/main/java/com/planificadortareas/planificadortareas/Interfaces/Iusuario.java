@@ -23,7 +23,7 @@ public interface Iusuario extends CrudRepository<usuario, String> {
     @Query("SELECT u FROM usuario u WHERE  DATEDIFF(NOW(), u.iniciosesion) >= 30")
     List<usuario> iniciosesionNotificar();
 
-    @Query("SELECT u FROM usuario u WHERE TIMESTAMPDIFF(MINUTE, u.notificado, CURRENT_TIMESTAMP) = 1")
+    @Query("SELECT u FROM usuario u WHERE u.notificado is NULL")
     List<usuario> notificacionRegistro();
 
 
