@@ -46,7 +46,7 @@ public class Taks {
         }
     }
 
-    @Scheduled(cron= "0 35 8 * * *" )
+    @Scheduled(cron= "0 51 14 * * *" )
     public void sendNotificationcronactualizarcontrasena(){
 
         var listaUsuario=data.actualizarContrasena();
